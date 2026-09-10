@@ -1,12 +1,12 @@
 name: Build, test, package
 
-on: [push,pull_request]
+on: [workflow_dispatch]
 
 jobs:
   cxx-build-workflow:
     uses: InsightSoftwareConsortium/ITKRemoteModuleBuildTestPackageAction/.github/workflows/build-test-cxx.yml@v5.4.6
 
-  python-build-workflow:
-    uses: InsightSoftwareConsortium/ITKRemoteModuleBuildTestPackageAction/.github/workflows/build-test-package-python.yml@v5.4.6
-    secrets:
-      pypi_password: ${{ secrets.pypi_password }}
+  # python-build-workflow:
+  #   uses: InsightSoftwareConsortium/ITKRemoteModuleBuildTestPackageAction/.github/workflows/build-test-package-python.yml@v5.4.6
+  #   secrets:
+  #     pypi_password: ${{ secrets.pypi_password }}
